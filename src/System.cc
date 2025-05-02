@@ -1324,6 +1324,20 @@ int System::GetTrackingState()
     return mTrackingState;
 }
 
+Frame System::GetCurrentFrame()
+{
+    unique_lock<mutex> lock(mMutexState);
+    return mpTracker->mCurrentFrame;
+}
+
+
+void System::CopyTo(cv::Mat im)
+{
+    unique_lock<mutex> lock(mMutexState);
+    mpTracker->mImGray.copyTo(im);
+    return;
+}
+
 vector<MapPoint*> System::GetTrackedMapPoints()
 {
     unique_lock<mutex> lock(mMutexState);
