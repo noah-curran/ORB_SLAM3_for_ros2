@@ -174,7 +174,7 @@ public:
     // Information from most recent processed frame
     // You can call this right after TrackMonocular (or stereo or RGBD)
     Frame GetCurrentFrame();
-    void CopyTo(cv::Mat im);
+    cv::Mat CopyTo(cv::Mat im);
     int GetTrackingState();
     std::vector<MapPoint*> GetTrackedMapPoints();
     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();

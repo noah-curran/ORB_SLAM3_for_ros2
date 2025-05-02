@@ -1331,11 +1331,11 @@ Frame System::GetCurrentFrame()
 }
 
 
-void System::CopyTo(cv::Mat im)
+cv::Mat System::CopyTo(cv::Mat im)
 {
     unique_lock<mutex> lock(mMutexState);
     mpTracker->mImGray.copyTo(im);
-    return;
+    return im;
 }
 
 vector<MapPoint*> System::GetTrackedMapPoints()
