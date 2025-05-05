@@ -1,3 +1,8 @@
+# TL;DR for my uses on Jetson device
+1. Clone Pangolin and after `make install` make sure to do `sudo ldconfig`.
+2. Clone this and build it following the instructions here. This exposes a few API things that we need for ROS2 publishing of topics
+3. Clone our [ORB SLAM3 for humble](https://github.com/noah-curran/orb_slam3_ros2_humble) which has ability to publish the final ORB SLAM visualization output to ROS2 topic
+
 # ORB-SLAM3
 
 ### V1.0, December 22th, 2021
